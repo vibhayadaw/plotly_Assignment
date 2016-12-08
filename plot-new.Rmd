@@ -1,0 +1,21 @@
+---
+title: "plot"
+author: "Vibha Singh"
+date: "December 9, 2016"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(plotly)
+```
+
+## Iris Data Sample classified on Petal Length and width and Species
+
+```{r, echo=FALSE}
+set.seed(2016-12-09)
+p <- plot_ly(iris, x = ~Petal.Length, y = ~Petal.Width,color = ~Species, mode = "markers", type = "scatter")
+p
+```
+
